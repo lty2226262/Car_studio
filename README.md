@@ -3,3 +3,8 @@
 
 The code will be released once it passes the review and is accepted.
 
+### Acknowledgment
+
+We extend our gratitude to the exceptional open-source projects:
+- [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)
+- [DVM-CAR](https://deepvisualmarketing.github.io/)
