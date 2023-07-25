@@ -4,7 +4,7 @@
 The code will be released once it passes the review and is accepted.
 
 ### Directory structure
-The following directory structure is required for the dataset. Please ensure that the downloaded `car_studio` and `{kitti-mot,kitti-obj}` (downloaded from the [official site](https://www.cvlibs.net/datasets/kitti/index.php)) directories are located in the same parent directory:
+The following directory structure is required for the dataset. Please ensure that the downloaded `car_studio`,`{kitti-mot,kitti-obj}` (download from the [official site](https://www.cvlibs.net/datasets/kitti/index.php)) or `dvm` (download from the [official site](https://deepvisualmarketing.github.io/)) directories are located in the same parent directory. Note that the `kitti-mot`, `kitti-obj`, and `dvm` datasets can be used individually and do not need to be downloaded simultaneously.
 
 ```bash
 ./data/
@@ -18,8 +18,9 @@ The following directory structure is required for the dataset. Please ensure tha
 |   |-- testing
 |   `-- training
 |-- kitti-obj
-    |-- testing
-    `-- training
+|   |-- testing
+|   `-- training
+`-- dvm
 ```
 
 ### Acknowledgment
