@@ -23,6 +23,20 @@ The following directory structure is required for the dataset. Please ensure tha
 `-- dvm
 ```
 
+## Bibtex
+If this work is helpful for your research, please cite the following BibTeX entry.
+
+```
+@misc{liu2023carstudio,
+      title={Car-Studio: Learning Car Radiance Fields from Single-View and Endless In-the-wild Images}, 
+      author={Tianyu Liu and Hao Zhao and Yang Yu and Guyue Zhou and Ming Liu},
+      year={2023},
+      eprint={2307.14009},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
 ### Acknowledgment
 
 We extend our gratitude to the exceptional open-source projects:
