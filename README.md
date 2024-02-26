@@ -18,7 +18,7 @@ git submodule update --init
 cd dependencies/nerfstudio
 pip install -e .
 
-cd dependencies/segment-anything
+cd ../../dependencies/segment-anything
 pip install -e .
 
 cd ../../
