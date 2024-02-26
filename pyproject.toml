@@ -1,0 +1,27 @@
+[project]
+name = "car_studio"
+version = "0.3.0"
+
+dependencies = [
+]
+
+[tool.setuptools.packages.find]
+include = ["car_studio*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+car-nerf = 'car_studio.configs.method_configs:CarNeRFStageOne'
+autorf = 'car_studio.configs.method_configs:AutoRFStageOne'
+pixelnerf = 'car_studio.configs.method_configs:PixelNerfStageOne'
+pixelnerf-mlp = 'car_studio.configs.method_configs:PixelNerfMLPStageOne'
+codenerf = 'car_studio.configs.method_configs:CodeNerfStageOne'
+car-nerf-stage-two = 'car_studio.configs.method_configs:CarNeRFStageTwo'
+pixelnerf-mlp-stage-two = 'car_studio.configs.method_configs:PixelNerfMLPStageTwo'
+autorf-stage-two = 'car_studio.configs.method_configs:AutoRFStageTwo'
+codenerf-stage-two = 'car_studio.configs.method_configs:CodeNerfStageTwo'
+car-nerf-symm-stage-one = 'car_studio.configs.method_configs:CarNeRFSymmStageOne'
+
+
+
+[project.entry-points.'nerfstudio.dataparser_configs']
+CarstudioDataParserConfig = 'car_studio.data.dataparsers.carstudio_dataparser:CarstudioDataParserConfigSpecification'
+KittiMOTDataParserConfig = 'car_studio.data.dataparsers.kittimot_dataparser:KittiMOTDataParserConfigSpecification'
