@@ -11,7 +11,6 @@
 ## Install
 
 ```bash
-cd car-studio
 conda create -n car-studio python=3.8 pip -y
 conda activate car-studio
 
