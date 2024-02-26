@@ -1,0 +1,14 @@
+/data/
+test/
+**/__pycache__/
+neural_scene_graph.egg-info/
+outputs/
+car_studio.egg-info/
+patches/
+render_out/
+*.zip
+render_out_dvm/
+build/
+render_out_color_ko_opt
+render_out_color_dvm
+render_out_color_ko

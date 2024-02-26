@@ -1,0 +1,182 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "process kitti datasets",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/process_kitti.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"1",
+			},
+			"justMyCode": true
+		},
+		{
+			"name": "process nuscenes datasets",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/process_nuscenes.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"0",
+			},
+			"justMyCode": true
+		},
+		{
+			"name": "train",
+			"type": "python",
+			"request": "launch",
+			"program": "/home/joey/miniconda3/envs/car-studio/bin/ns-train",
+			"console": "integratedTerminal",
+			"args": ["car-nerf-symm-stage-one"],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"4",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "train_debug",
+			"type": "python",
+			"request": "launch",
+			"program": "/home/joey/miniconda3/envs/car-studio/bin/ns-train",
+			"console": "integratedTerminal",
+			"args": ["pixelnerf",
+				// "--load_checkpoint",
+				// "/home/joey/code/car-studio/outputs/stage-one/car-nerf/2023-06-08_055020/step-000096000_bak.ckpt",
+				// "--steps_per_eval_batch",
+				// "1",
+				// "--steps_per_eval_image", "1",
+				// "--steps_per_eval_all_images", "1",
+			],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"0",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "render_all_view",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/render_all_views.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"2",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "render_novel_view",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/render_novel_view.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"3",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "statistics_obj",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/statistics_obj.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"1",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "dd3d",
+			"type": "python",
+			"request": "launch",
+			"cwd": "/home/joey/code/car-studio/dependencies/dd3d",
+			"program": "scripts/train.py",
+			"console": "integratedTerminal",
+			"args": ["+experiments=dd3d_kitti_v99",
+				"EVAL_ONLY=True",
+				"MODEL.CKPT=./model_final.pth"],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"2",
+				"PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION":"python",
+				"PYTHONPATH":"./",
+			},
+			"justMyCode": false,
+		},
+		{
+			"name": "dd3d_dvm",
+			"type": "python",
+			"request": "launch",
+			"cwd": "/home/joey/code/car-studio/dependencies/dd3d",
+			"program": "scripts/train.py",
+			"console": "integratedTerminal",
+			"args": ["+experiments=dd3d_dvm_v99",
+				"EVAL_ONLY=True",
+				"MODEL.CKPT=./model_final.pth"],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"6",
+				"PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION":"python",
+				"PYTHONPATH":"./",
+			},
+			"justMyCode": false,
+		},
+		{
+			"name": "dd3d_filter",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/dd3d_filter.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"0",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "process_dd3d",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/process_dd3d.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"2",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name":"generate_thumbnail",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/generate_thumbnail.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"2",
+			},
+			"justMyCode": true,
+		},
+		{
+			"name": "render_novel_view_patches",
+			"type": "python",
+			"request": "launch",
+			"program": "car_studio/scripts/datasets/render_zero_shot_novel_view_patches.py",
+			"console": "integratedTerminal",
+			"args": [],
+			"env": {
+				"CUDA_VISIBLE_DEVICES":"4",
+			},
+			"justMyCode": true,
+		},
+
+	]
+}

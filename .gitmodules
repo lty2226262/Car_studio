@@ -1,0 +1,12 @@
+[submodule "dependencies/nerfstudio"]
+	path = dependencies/nerfstudio
+	url = git@github.com:nerfstudio-project/nerfstudio.git
+	branch = 814db32ec4d04a9b665a9c8be659321cb19527ea
+[submodule "dependencies/segment-anything"]
+	path = dependencies/segment-anything
+	url = git@github.com:facebookresearch/segment-anything.git
+	branch = 6fdee8f2727f4506cfbbe553e23b895e27956588
+[submodule "dependencies/dd3d"]
+	path = dependencies/dd3d
+	url = git@github.com:TRI-ML/dd3d.git
+	branch = 56fad8ec9eb7fbd373953f49f9372120b4cd740c
