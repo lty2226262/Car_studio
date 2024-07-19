@@ -45,7 +45,9 @@ To prepare the KITTI multi-object tracking dataset, follow these steps:
 
 ### Process KITTI MOT
 
-To convert the original KITTI multi-object tracking dataset to the CarPatch3D dataset, follow these steps:
+**Strongly recommended**, you can directly download the processed dataset 'km.zip' from the following link: [here](https://hkustconnect-my.sharepoint.com/personal/tliubk_connect_ust_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftliubk%5Fconnect%5Fust%5Fhk%2FDocuments%2Fdataset%2FCarPatch3D&ga=1)
+
+**Alternatively**, you could also process them manually, but need to dive into the code and have some modifications. To convert the original KITTI multi-object tracking dataset to the CarPatch3D dataset, follow these steps:
 
 1. Download the pre-trained model for segment-anything:
 
@@ -59,7 +61,7 @@ wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -O dep
 python car_studio/scripts/datasets/process_kitti.py --dataset km --data_dir "./data/kitti-mot"
 ```
 
-**Alternatively**, you can directly download the processed dataset 'km.zip' from the following link: [here](https://hkustconnect-my.sharepoint.com/personal/tliubk_connect_ust_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftliubk%5Fconnect%5Fust%5Fhk%2FDocuments%2Fdataset%2FCarPatch3D&ga=1)
+
 
 ### Process More Data(Optional)
 
